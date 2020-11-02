@@ -1,0 +1,1810 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+/* fonts end */
+
+/* --- Loader  ==== */
+
+.loading{
+    margin: 0 auto;
+    position: fixed;
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    animation:  fadeOut 3s ;
+    animation-fill-mode: forwards;
+    -webkit-animation:  fadeOut 3s ;
+    -webkit-animation-fill-mode: forwards;
+    -o-animation:  fadeOut 3s ;
+    -o-animation-fill-mode: forwards;
+    -moz-animation:  fadeOut 3s ;
+    -moz-animation-fill-mode: forwards;
+}
+
+.loading .main{
+    margin : 15rem auto;
+    display: flex;
+    justify-content: center;
+}
+
+.dot{
+    border: 5px solid #000000;
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+}
+
+.dot2{
+    border: 5px solid #ffff00;
+    border-radius: 50px;
+    background-color: transparent;
+    width: 100px;
+    height: 100px;
+    margin: -5px -5px;
+    border-left-color: transparent;       
+    animation: loader 1s linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes loader{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeOut{
+    100%{
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: lightgoldenrodyellow ;
+    
+}
+
+.navbar{
+    background-color: transparent !important;
+    transition: 0.4s linear;
+    -webkit-transition: 0.4s linear;
+    -moz-transition: 0.4s linear;
+    -o-transition: 0.4s linear;
+}
+
+#nav.fixed{
+    background-color: rgb(10, 2, 2)   !important;
+    padding: 0;
+}
+
+.navbar-brand{
+    font-size: 30px;
+    color: #ffff00 !important;
+    padding-left: 40px ;
+}
+
+.navbar-brand:hover{
+    color: red !important;
+}
+
+.nav-link{
+    font-size: 20px;
+    font-weight: 400;
+    margin: 15px;
+    color: white !important;
+    transition: 0.3s  cubic-bezier(1, 0, 0, 1);
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+}
+
+.nav-link:hover{
+    font-size: 22px;
+    color: red !important;  
+}
+ 
+.navbar-nav{
+    margin-left: 700px;
+}
+
+
+.home{
+    background: url('../images/back.jpg') no-repeat center center / cover;
+    height: 100vh;
+}
+
+.home .col-md-6{
+    margin: 28% auto ;
+}
+
+.home .col-md-6 h3 a{
+    font-size: 45px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.titles p{
+    margin-bottom: 0;
+    font-size: 22px;
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+}
+
+
+.button a{
+    font-family: 'Roboto', sans-serif;
+    margin: 20px auto;
+    background: #ffff00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+    font-weight: 700;
+    color: #000000;
+    text-decoration: none !important;
+    border-radius: 5px;
+    cursor: pointer;
+    max-width: 150px;
+    height: 50px !important;
+    transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+}
+
+.button a:hover{
+    color:red;
+}
+
+
+/* ======== Sevices ============ */
+.services {
+    padding: 25px 0 23px;
+}
+
+
+.services .container h3{
+    font-size: 26px;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.services .container .row .col-md-4 .card{
+    border: none;
+    border-radius: 0;
+}
+
+.services .container .row .col-md-4 .card .card-header{
+    text-align: center;
+    border-bottom: none;
+    background-color: transparent;
+}
+
+.card .card-header i{
+    font-size: 45px;
+    background: rgb(247, 222, 6);
+    padding: 15px;
+    border-radius: 50px;
+    color: rgb(252, 241, 241);
+}
+
+.card .card-body{
+    text-align: center;
+}
+
+
+
+
+
+
+
+/*  =====   POrtfolio starts ====== */
+
+.portfolio{
+    padding:  15px 0 15px ;
+}
+
+ .col-md-4 .card .card-header img{
+    width: 100%;
+    height: 233px;
+}
+
+.card{
+    border-radius: 0;
+}
+
+.card .card-header {
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+.card-header .overlay{
+    width: 100%;
+    height: 100%;
+    background-color: #ffff00cf;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.5s ease ;
+    overflow: hidden;
+    -webkit-transition: 0.5s ease ;
+    -moz-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+}
+
+
+.card-header .overlay:hover{
+    opacity: 1;
+}
+
+
+.card-header .overlay h4{
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-size: 30PX;
+    margin-top: 25px; 
+}
+
+.card-header .overlay p{
+    margin-bottom: 0;
+    padding: 3px 10px 5px;
+    text-align: center;
+}
+
+.portfolio .container  h3{
+    font-size: 26px;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ====== About ===== */
+
+
+.about{
+    padding:  15px 0 15px ;
+}
+
+.about .container  h3{
+    font-family: 'Roboto', sans-serif;
+    font-size: 26px;
+    text-transform: uppercase;
+}
+
+.about .container .col-md-4{
+    margin: 53px 42px;
+}
+
+.about .container .col-md-4 img{
+    height: 335px;
+}
+
+.about .container .col-md-4:nth-child(2) p{
+    margin-top: 35px;
+    margin-bottom: 70px;
+    letter-spacing: 1px;
+    line-height: 20px;
+}
+
+.about .container .col-md-4:nth-child(2) h4{
+    font-family: 'Lato', sans-serif;
+    font-size: 30px;
+    margin-top: 0;
+}
+
+.info ul li{
+    list-style-type: none;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info ul li .firstspan{
+    font-weight: bold;
+}
+
+.info ul li .secondspan a{
+    color: #808080;
+    text-decoration: none;
+}
+
+.info ul li .secondspan a:hover{
+    color: #000000;
+}
+
+.info ul li .secondspan {
+    color: #808080;
+}
+
+
+
+/* === footer starts === */
+
+
+.footer {
+    background-color: #000000;
+    padding: 15px;
+   
+}
+
+.footer .socialnetwork a {
+    text-decoration: none;
+}
+
+.footer .socialnetwork a .fab{
+    width: 40px;
+    height: 40px;
+    background-color: #ffff00;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 40px;
+    color: #000000;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    margin: 10px;
+}
+
+.footer .socialnetwork a .fab:hover{
+    background: #000000;
+    color: #cfcf08;
+}
+.copyright1 p span{
+    color: #ffffff;
+    text-align: center;
+    padding-top: 15px;
+    font-weight: 500;
+}
+.copyright1 p{
+    color: grey;
+    text-align: center;
+    padding-top: 15px;
+    font-weight: 500;
+}
+
+.copyright2{
+    color: #ffffff; 
+    text-align: center;
+    padding-top: 15px;
+    font-weight: 500;
+}
+
+/* scrollbar  */
+
+::-webkit-scrollbar{
+    width: 7px !important;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #ffff00 !important;
+    border-radius: 50px !important;
+}
+
+::-webkit-scrollbar-track{
+    background: #000000;
+}
+
+.footer .socialnetwork{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/* ======== Media starts ===== */
+
+
+@media screen and (min-width:1025px){
+    html, body{
+        overflow-x: hidden;
+    }
+
+    .navbar >  button{
+        border: none !important;
+        padding: 0 23px 0 0;
+    }
+
+    .navbar button:focus{
+        box-shadow: none !important;
+        outline: none !important;
+    }
+
+    .navbar-brand{
+        padding: auto;
+        font-size: 2rem;
+    }
+
+    .navbar-nav{
+        margin: 0 25rem;
+    }
+
+   
+    .navbar-nav > li{
+        margin: 5px;
+    }
+    .navbar-expand-md .navbar-nav .nav-link{
+        font-size: 20px !important;
+    }
+        
+    .change{
+          background-color: #000!important;
+         opacity: .9;
+    }
+
+
+    /* home */
+ 
+    .home {
+        height: 35rem;
+    }
+
+    .col-md-6{
+        margin: 40% auto;
+    }
+
+    .titles p{ 
+        font-size:20px ;
+    }
+
+
+    .titles > h3 > a{ 
+        font-size: 3rem;
+    }
+
+    .button{
+        margin: 3rem 2.5rem auto;
+    }
+
+    .button > a {
+        padding: 1rem 1.5rem;
+        font-size: 1.5rem;
+    }
+
+
+    /* == services ===== */
+
+    .services > .container  h3 {
+        font-size: 25px !important;
+    }
+
+
+    .services .container p{
+        font-size: 15px;
+    }
+
+
+    .services > .container > .row > .col-md-4{
+        margin-bottom: 10px;
+    }
+
+    .services > .container > .row > .col-md-4 > .card > .card-header > .fas{
+        font-size: 25px;
+    }
+
+
+    /* == portfolio === */
+
+
+
+    .portfolio .container h3 {
+        font-size: 25px;
+    }
+
+    .portfolio .container .row .card-header .overlay h4{
+        font-size: 25px;
+    }
+
+    .portfolio .container p{
+        font-size: 15px;
+    }
+
+
+    /* ==== about === */
+     
+    .about .container h3 {
+        font-size: 25px;
+    }
+
+    
+    .about .container p{
+        font-size: 20px;
+    }
+
+    .about > .container  .row  .col-md-4:nth-child(2) .info h4{
+        font-size: 30px;
+    }
+
+    .about > .container .row .col-md-4 .info {
+        width: 350px;
+    }
+
+    .about > .container .row .col-md-4 .info ul  li span{
+        font-size: 20px;
+    }
+
+
+    /* === footer === */
+
+    .footer  > .container-fluid > .row > .col-md-4 > .copyright1 > p{
+        font-size: 15px;
+    }
+    .footer  > .container-fluid > .row > .col-md-4 > .copyright2{
+        font-size: 15px;
+    }
+
+    .footer .socialnetwork a > .fab{
+        font-size: 20px;
+    }
+
+    /* === loader === */
+
+    .dot {
+        width: 70px;
+        height: 70px;
+    }
+    .dot2 {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media screen and (max-width:1024px){
+    html, body{
+        overflow-x: hidden;
+    }
+
+    .navbar >  button{
+        border: none !important;
+        padding: 0 23px 0 0;
+    }
+
+    .navbar button:focus{
+        box-shadow: none !important;
+        outline: none !important;
+    }
+
+    .navbar-brand{
+        padding: auto;
+        font-size: 2rem;
+    }
+
+    .navbar-nav{
+        margin: 0 24rem;
+    }
+
+   
+    .navbar-nav > li{
+        margin: 5px;
+    }
+    .navbar-expand-md .navbar-nav .nav-link{
+        font-size: 20px !important;
+    }
+        
+    .change{
+          background-color: #000!important;
+         opacity: .9;
+    }
+
+
+    /* home */
+ 
+    .home {
+        height: 35rem;
+    }
+
+    .col-md-6{
+        margin: 40% auto;
+    }
+
+    .titles p{ 
+        font-size:20px ;
+    }
+
+
+    .titles > h3 > a{ 
+        font-size: 3rem;
+    }
+
+    .button{
+        margin: 3rem 2.5rem auto;
+    }
+
+    .button > a {
+        padding: 1rem 1.5rem;
+        font-size: 1.5rem;
+    }
+
+
+    /* == services ===== */
+
+    .services > .container  h3 {
+        font-size: 25px !important;
+    }
+
+
+    .services .container p{
+        font-size: 15px;
+    }
+
+
+    .services > .container > .row > .col-md-4{
+        margin-bottom: 10px;
+    }
+
+    .services > .container > .row > .col-md-4 > .card > .card-header > .fas{
+        font-size: 25px;
+    }
+
+
+    /* == portfolio === */
+
+
+
+    .portfolio .container h3 {
+        font-size: 25px;
+    }
+
+    .portfolio .container .row .card-header .overlay h4{
+        font-size: 25px;
+    }
+
+    .portfolio .container p{
+        font-size: 15px;
+    }
+
+
+    /* ==== about === */
+     
+    .about .container h3 {
+        font-size: 25px;
+    }
+
+    
+    .about .container p{
+        font-size: 20px;
+    }
+
+    .about > .container  .row  .col-md-4:nth-child(2) .info h4{
+        font-size: 30px;
+    }
+
+    .about > .container .row .col-md-4 .info {
+        width: 350px;
+    }
+
+    .about > .container .row .col-md-4 .info ul  li span{
+        font-size: 20px;
+    }
+
+
+    /* === footer === */
+
+    .footer  > .container-fluid > .row > .col-md-4 > .copyright1 > p{
+        font-size: 15px;
+    }
+    .footer  > .container-fluid > .row > .col-md-4 > .copyright2{
+        font-size: 15px;
+    }
+
+    .footer .socialnetwork a > .fab{
+        font-size: 20px;
+    }
+
+    /* === loader === */
+
+    .dot {
+        width: 70px;
+        height: 70px;
+    }
+    .dot2 {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media screen and (max-width:991px){
+    html, body{
+        overflow-x: hidden;
+    }
+
+    .navbar >  button{
+        border: none !important;
+        padding: 0 23px 0 0;
+    }
+
+    .navbar button:focus{
+        box-shadow: none !important;
+        outline: none !important;
+    }
+
+    .navbar-brand{
+        padding: auto;
+        font-size: 2rem;
+    }
+
+    .navbar-nav{
+        margin: 0 9rem;
+    }
+
+   
+    .navbar-nav > li{
+        margin: 5px;
+    }
+    .navbar-expand-md .navbar-nav .nav-link{
+        font-size: 20px !important;
+    }
+        
+    .change{
+          background-color: #000!important;
+         opacity: .9;
+    }
+
+
+    /* home */
+ 
+    .home {
+        height: 35rem;
+    }
+
+    .col-md-6{
+        margin: 40% auto;
+    }
+
+    .titles p{ 
+        font-size:20px ;
+    }
+
+
+    .titles > h3 > a{ 
+        font-size: 3rem;
+    }
+
+    .button{
+        margin: 3rem 2.5rem auto;
+    }
+
+    .button > a {
+        padding: 1rem 1.5rem;
+        font-size: 1.5rem;
+    }
+
+
+    /* == services ===== */
+
+    .services > .container  h3 {
+        font-size: 25px !important;
+    }
+
+
+    .services .container p{
+        font-size: 15px;
+    }
+
+
+    .services > .container > .row > .col-md-4{
+        margin-bottom: 10px;
+    }
+
+    .services > .container > .row > .col-md-4 > .card > .card-header > .fas{
+        font-size: 25px;
+    }
+
+
+    /* == portfolio === */
+
+
+
+    .portfolio .container h3 {
+        font-size: 25px;
+    }
+
+    .portfolio .container .row .card-header .overlay h4{
+        font-size: 25px;
+    }
+
+    .portfolio .container p{
+        font-size: 15px;
+    }
+
+
+    /* ==== about === */
+     
+    .about .container h3 {
+        font-size: 25px;
+    }
+
+    
+    .about .container p{
+        font-size: 20px;
+    }
+
+    .about > .container  .row  .col-md-4:nth-child(2) .info h4{
+        font-size: 30px;
+    }
+
+    .about > .container .row .col-md-4 .info {
+        width: 350px;
+    }
+
+    .about > .container .row .col-md-4 .info ul  li span{
+        font-size: 20px;
+    }
+
+
+
+    /* === footer === */
+
+    .footer  > .container-fluid > .row > .col-md-4 > .copyright1 > p{
+        font-size: 15px;
+    }
+    .footer  > .container-fluid > .row > .col-md-4 > .copyright2{
+        font-size: 15px;
+    }
+
+    .footer .socialnetwork a > .fab{
+        font-size: 20px;
+    }
+
+    /* === loader === */
+
+    .dot {
+        width: 70px;
+        height: 70px;
+    }
+    .dot2 {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media screen and (max-width:767px){
+    html, body{
+        overflow-x: hidden;
+    }
+
+    .navbar >  button{
+        border: none !important;
+        padding: 0 23px 0 0;
+    }
+
+    .navbar button:focus{
+        box-shadow: none !important;
+        outline: none !important;
+    }
+
+    .navbar-brand{
+        padding: 20px;
+        font-size: 2rem;
+    }
+
+    .navbar-nav{
+        margin: 0 15rem;
+    }
+
+   
+    .navbar-nav > li{
+        margin: 5px;
+    }
+    .navbar-expand-md .navbar-nav .nav-link{
+        font-size: 20px !important;
+    }
+        
+    .change{
+          background-color: #000!important;
+         opacity: .9;
+    }
+
+
+    /* home */
+ 
+    .home {
+        height: 35rem;
+    }
+
+    .col-md-6{
+        margin: 40% auto;
+    }
+
+    .titles p{ 
+        font-size:20px ;
+    }
+
+
+    .titles > h3 > a{ 
+        font-size: 3rem;
+    }
+    .button{
+        margin: 3rem 2.5rem auto;
+    }
+
+    .button > a {
+        padding: 1rem 1.5rem;
+        font-size: 1.5rem;
+    }
+
+
+    /* == services ===== */
+
+    .services > .container  h3 {
+        font-size: 25px !important;
+    }
+
+
+    .services .container p{
+        font-size: 15px;
+    }
+
+
+    .services > .container > .row > .col-md-4{
+        margin-bottom: 10px;
+    }
+
+    .services > .container > .row > .col-md-4 > .card > .card-header > .fas{
+        font-size: 25px;
+    }
+
+
+    /* == portfolio === */
+
+
+
+    .portfolio .container h3 {
+        font-size: 25px;
+    }
+
+    .portfolio .container .row .card-header .overlay h4{
+        font-size: 25px;
+    }
+
+    .portfolio .container p{
+        font-size: 15px;
+    }
+
+
+    /* ==== about === */
+     
+    .about .container h3 {
+        font-size: 25px;
+    }
+
+    
+    .about .container p{
+        font-size: 20px;
+    }
+
+    .about > .container .row .col-md-4 .info {
+        width: 350px;
+        height: auto;
+    }
+
+    .about > .container  .row  .col-md-4:nth-child(2) .info h4{
+        font-size: 30px;
+    }
+
+    .about > .container .row .col-md-4 .info ul  li span{
+        font-size: 20px;
+    }
+
+    .about .container .col-md-4 img {
+        height: 400px;
+    }
+
+    /* === footer === */
+
+    .footer  > .container-fluid > .row > .col-md-4 > .copyright1 > p{
+        font-size: 15px;
+    }
+    .footer  > .container-fluid > .row > .col-md-4 > .copyright2{
+        font-size: 15px;
+    }
+
+    .footer .socialnetwork a > .fab{
+        font-size: 20px;
+    }
+
+    /* === loader === */
+
+    .dot {
+        width: 70px;
+        height: 70px;
+    }
+    .dot2 {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media screen and (max-width:501px){
+    html, body{
+        overflow-x: hidden;
+    }
+
+    .navbar >  button{
+        border: none !important;
+        padding: 0 23px 0 0;
+    }
+
+    .navbar button:focus{
+        box-shadow: none !important;
+        outline: none !important;
+    }
+
+    .navbar-brand{
+        padding: auto;
+        font-size: 1.3rem;
+    }
+
+    .navbar-nav{
+        margin: 0 10rem;
+    }
+
+   
+    .navbar-nav > li{
+        margin: 10px;
+    }
+        
+    .change{
+          background-color: #000!important;
+         opacity: .9;
+    }
+
+
+    /* home */
+ 
+    .home {
+        height: 25rem;
+    }
+
+    .col-md-6{
+        margin: 50% auto;
+    }
+
+    .titles p{ 
+        font-size: 1rem;
+    }
+
+
+    .titles > h3 > a{ 
+        font-size: 30px !important;
+    }
+
+    .button{
+        margin: 3rem 2.5rem auto;
+    }
+
+    .button > a {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+
+
+    /* == services ===== */
+
+    .services > .container  h3 {
+        font-size: 25px !important;
+    }
+
+
+    .services .container p{
+        font-size: 15px;
+    }
+
+
+    .services > .container > .row > .col-md-4{
+        margin-bottom: 10px;
+    }
+
+    .services > .container > .row > .col-md-4 > .card > .card-header > .fas{
+        font-size: 25px;
+    }
+
+
+    /* == portfolio === */
+
+
+
+    .portfolio .container h3 {
+        font-size: 25px;
+    }
+
+    .portfolio .container .row .card-header .overlay h4{
+        font-size: 25px;
+    }
+
+    .portfolio .container p{
+        font-size: 15px;
+    }
+
+
+    /* ==== about === */
+     
+    .about .container h3 {
+        font-size: 25px;
+    }
+
+    
+    .about .container p{
+        font-size: 15px;
+    }
+
+    
+    .about > .container .row .col-md-4 .info {
+        width: auto;
+        height: auto;
+    }
+
+
+    .about > .container  .row  .col-md-4:nth-child(2) .info h4{
+        font-size: 25px;
+    }
+
+    .about > .container .row .col-md-4 .info ul  li span{
+        font-size: 15px;
+    }
+
+    /* === footer === */
+
+    .footer  > .container-fluid > .row > .col-md-4 > .copyright1 > p{
+        font-size: 15px;
+    }
+    .footer  > .container-fluid > .row > .col-md-4 > .copyright2{
+        font-size: 15px;
+    }
+
+    .footer .socialnetwork a > .fab{
+        font-size: 20px;
+    }
+
+    /* === loader === */
+
+    .dot {
+        width: 50px;
+        height: 50px;
+    }
+    .dot2 {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
+@media screen and (max-width:460px){
+    html, body{
+        overflow-x: hidden;
+    }
+
+    .navbar >  button{
+        border: none !important;
+        padding: 0 23px 0 0;
+    }
+
+    .navbar button:focus{
+        box-shadow: none !important;
+        outline: none !important;
+    }
+
+    .navbar-brand{
+        padding: auto;
+        font-size: 1.3rem;
+    }
+
+    .navbar-nav{
+        margin: 0 9rem;
+    }
+
+   
+    .navbar-nav > li{
+        margin: 10px;
+    }
+        
+    .change{
+          background-color: #000!important;
+         opacity: .9;
+    }
+
+
+    /* home */
+ 
+    .home {
+        height: 25rem;
+    }
+
+    .col-md-6{
+        margin: 50% auto;
+    }
+
+    .titles p{ 
+        font-size: 1rem;
+    }
+
+
+    .titles > h3 > a{ 
+        font-size: 30px !important;
+    }
+
+    .button{
+        margin: 3rem 2.5rem auto;
+    }
+
+    .button > a {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+
+
+    /* == services ===== */
+
+    .services > .container  h3 {
+        font-size: 25px !important;
+    }
+
+
+    .services .container p{
+        font-size: 15px;
+    }
+
+
+    .services > .container > .row > .col-md-4{
+        margin-bottom: 10px;
+    }
+
+    .services > .container > .row > .col-md-4 > .card > .card-header > .fas{
+        font-size: 25px;
+    }
+
+
+    /* == portfolio === */
+
+
+
+    .portfolio .container h3 {
+        font-size: 25px;
+    }
+
+    .portfolio .container .row .card-header .overlay h4{
+        font-size: 25px;
+    }
+
+    .portfolio .container p{
+        font-size: 15px;
+    }
+
+
+    /* ==== about === */
+     
+    .about .container h3 {
+        font-size: 25px;
+    }
+
+    
+    .about .container p{
+        font-size: 15px;
+    }
+
+    
+    .about > .container .row .col-md-4 .info {
+        width: auto;
+        height: auto;
+    }
+
+
+    .about > .container  .row  .col-md-4:nth-child(2) .info h4{
+        font-size: 25px;
+    }
+
+    .about > .container .row .col-md-4 .info ul  li span{
+        font-size: 15px;
+    }
+
+    /* === footer === */
+
+    .footer  > .container-fluid > .row > .col-md-4 > .copyright1 > p{
+        font-size: 15px;
+    }
+    .footer  > .container-fluid > .row > .col-md-4 > .copyright2{
+        font-size: 15px;
+    }
+
+    .footer .socialnetwork a > .fab{
+        font-size: 20px;
+    }
+
+    /* === loader === */
+
+    .dot {
+        width: 50px;
+        height: 50px;
+    }
+    .dot2 {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
+@media screen and (max-width:400px){
+    html, body{
+        overflow-x: hidden;
+    }
+
+    .navbar >  button{
+        border: none !important;
+        padding: 0 23px 0 0;
+    }
+
+    .navbar button:focus{
+        box-shadow: none !important;
+        outline: none !important;
+    }
+
+    .navbar-brand{
+        padding: auto;
+        font-size: 1.3rem;
+    }
+
+    .navbar-nav{
+        margin: 0 7.7rem;
+    }
+
+   
+    .navbar-nav > li{
+        margin: 10px;
+    }
+        
+    .change{
+          background-color: #000!important;
+         opacity: .9;
+    }
+
+
+    /* home */
+ 
+    .home {
+        height: 25rem;
+    }
+
+    .col-md-6{
+        margin: 50% auto;
+    }
+
+    .titles p{ 
+        font-size: 1rem;
+    }
+
+
+    .titles > h3 > a{ 
+        font-size: 30px !important;
+    }
+
+    .button{
+        margin: 3rem 2.5rem auto;
+    }
+
+    .button > a {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+
+
+    /* == services ===== */
+
+    .services > .container  h3 {
+        font-size: 20px !important;
+    }
+
+
+    .services .container p{
+        font-size: 12px;
+    }
+
+
+    .services > .container > .row > .col-md-4{
+        margin-bottom: 10px;
+    }
+
+    .services > .container > .row > .col-md-4 > .card > .card-header > .fas{
+        font-size: 20px;
+    }
+
+
+    /* == portfolio === */
+
+
+
+    .portfolio .container h3 {
+        font-size: 20px;
+    }
+
+    .portfolio .container .row .card-header .overlay h4{
+        font-size: 20px;
+    }
+
+    .portfolio .container p{
+        font-size: 12px;
+    }
+
+
+    /* ==== about === */
+     
+    .about .container h3 {
+        font-size: 20px;
+    }
+
+    
+    .about .container p{
+        font-size: 12px;
+    }
+
+    
+    .about > .container .row .col-md-4 .info {
+        width: auto;
+        height: auto;
+    }
+
+
+    .about > .container  .row  .col-md-4:nth-child(2) .info h4{
+        font-size: 20px;
+    }
+
+    .about > .container .row .col-md-4 .info ul  li span{
+        font-size: 12px;
+    }
+
+    /* === footer === */
+
+    .footer  > .container-fluid > .row > .col-md-4 > .copyright1 > p{
+        font-size: 12px;
+    }
+    .footer  > .container-fluid > .row > .col-md-4 > .copyright2{
+        font-size: 12px;
+    }
+
+    .footer .socialnetwork a > .fab{
+        font-size: 18px;
+    }
+
+    /* === loader === */
+
+    .dot {
+        width: 30px;
+        height: 30px;
+    }
+    .dot2 {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (max-width:370px){
+    html, body{
+        overflow-x: hidden;
+    }
+
+    .navbar >  button{
+        border: none !important;
+        padding: 0 23px 0 0;
+    }
+
+    .navbar button:focus{
+        box-shadow: none !important;
+        outline: none !important;
+    }
+
+    .navbar-brand{
+        padding: auto;
+        font-size: 1.3rem;
+    }
+
+    .navbar-nav{
+        margin: 0 7rem;
+    }
+
+   
+    .navbar-nav > li{
+        margin: 10px;
+    }
+        
+    .change{
+          background-color: #000!important;
+         opacity: .9;
+    }
+
+
+    /* home */
+ 
+    .home {
+        height: 25rem;
+    }
+
+    .col-md-6{
+        margin: 50% auto;
+    }
+
+    .titles p{ 
+        font-size: 1rem;
+    }
+
+
+    .titles > h3 > a{ 
+        font-size: 30px !important;
+    }
+
+    .button{
+        margin: 3rem 2.5rem auto;
+    }
+
+    .button > a {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+
+
+    /* == services ===== */
+
+    .services > .container  h3 {
+        font-size: 20px !important;
+    }
+
+
+    .services .container p{
+        font-size: 12px;
+    }
+
+
+    .services > .container > .row > .col-md-4{
+        margin-bottom: 10px;
+    }
+
+    .services > .container > .row > .col-md-4 > .card > .card-header > .fas{
+        font-size: 20px;
+    }
+
+
+    /* == portfolio === */
+
+
+
+    .portfolio .container h3 {
+        font-size: 20px;
+    }
+
+    .portfolio .container .row .card-header .overlay h4{
+        font-size: 20px;
+    }
+
+    .portfolio .container p{
+        font-size: 12px;
+    }
+
+
+    /* ==== about === */
+     
+    .about .container h3 {
+        font-size: 20px;
+    }
+
+    
+    .about .container p{
+        font-size: 12px;
+    }
+
+
+    
+    .about > .container .row .col-md-4 .info {
+        width: auto;
+        height: auto;
+    }
+
+
+    .about > .container  .row  .col-md-4:nth-child(2) .info h4{
+        font-size: 20px;
+    }
+
+    .about > .container .row .col-md-4 .info ul  li span{
+        font-size: 12px;
+    }
+
+    /* === footer === */
+
+    .footer  > .container-fluid > .row > .col-md-4 > .copyright1 > p{
+        font-size: 12px;
+    }
+    .footer  > .container-fluid > .row > .col-md-4 > .copyright2{
+        font-size: 12px;
+    }
+
+    .footer .socialnetwork a > .fab{
+        font-size: 18px;
+    }
+
+    /* === loader === */
+
+    .dot {
+        width: 30px;
+        height: 30px;
+    }
+    .dot2 {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (min-width:315px) and (max-width:330px){
+    html, body{
+        overflow-x: hidden;
+    }
+
+    .navbar >  button{
+        border: none !important;
+        padding: 0 23px 0 0;
+    }
+
+    .navbar button:focus{
+        box-shadow: none !important;
+        outline: none !important;
+    }
+
+    .navbar-brand{
+        padding: auto;
+        font-size: 1.3rem;
+    }
+
+    .navbar-nav{
+        margin: 0 6rem;
+    }
+
+   
+    .navbar-nav > li{
+        margin: 10px;
+    }
+        
+    .change{
+          background-color: #000!important;
+         opacity: .9;
+    }
+
+
+    /* home */
+ 
+    .home {
+        height: 25rem;
+    }
+
+    .col-md-6{
+        margin: 50% auto;
+    }
+
+    .titles p{ 
+        font-size: 1rem;
+    }
+
+
+    .titles > h3 > a{ 
+        font-size: 30px !important;
+    }
+
+    .button{
+        margin: 3rem 2.5rem auto;
+    }
+
+    .button > a {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+
+
+    /* == services ===== */
+
+    .services > .container  h3 {
+        font-size: 20px !important;
+    }
+
+
+    .services .container p{
+        font-size: 12px;
+    }
+
+
+    .services > .container > .row > .col-md-4{
+        margin-bottom: 10px;
+    }
+
+    .services > .container > .row > .col-md-4 > .card > .card-header > .fas{
+        font-size: 20px;
+    }
+
+
+    /* == portfolio === */
+
+
+
+    .portfolio .container h3 {
+        font-size: 20px;
+    }
+
+    .portfolio .container .row .card-header .overlay h4{
+        font-size: 20px;
+    }
+
+    .portfolio .container p{
+        font-size: 12px;
+    }
+
+
+    /* ==== about === */
+     
+    .about .container h3 {
+        font-size: 20px;
+    }
+
+    
+    .about .container p{
+        font-size: 12px;
+    }
+
+    .about > .container  .row  .col-md-4:nth-child(2) .info h4{
+        font-size: 20px;
+    }
+
+    .about > .container .row .col-md-4 .info {
+        width: auto;
+        height: auto;
+    }
+
+    .about > .container .row .col-md-4 .info ul  li span{
+        font-size: 12px;
+    }
+
+    /* === footer === */
+
+    .footer  > .container-fluid > .row > .col-md-4 > .copyright1 > p{
+        font-size: 12px;
+    }
+    .footer  > .container-fluid > .row > .col-md-4 > .copyright2{
+        font-size: 12px;
+    }
+
+    .footer .socialnetwork a > .fab{
+        font-size: 18px;
+    }
+
+    /* === loader === */
+
+    .dot {
+        width: 30px;
+        height: 30px;
+    }
+    .dot2 {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+
+
+
+
+
